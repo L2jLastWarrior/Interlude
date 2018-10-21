@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="L2jLastWarrior_CorePack" default="dist-local" basedir=".">
+    <description>
+        
+    </description>
+    
+    <property file="build.properties"/>
+    <property name="src" location="source"/>
+    <property name="src-lib" location="lib"/>
+    
+    <target name="prepare-test" description="Prepare the test folder.">
+        <property name="build" location="${test_destination_folder"/>
+    </target>
+    
+    <target name="prepare-compileRev" description="Prepare the Compiled Rev folder.">
+        <property name="build" location="${compiled_rev_destination_folder"/>
+    </target>
+    
+    <target name="prepare-local" description="Prepare the local folder property.">
+        <property name="build" location="build"/>
+    </target>
+    
+    <target name="prepare-final" description="Prepare the final folders properties.">
+        <property name="build.classes" location="${build}/classes"/>
+        <property name="build.dist" location="${build}/dist"/>
+        <property name="build.dist.login" location="${build.dist}/loginserver"/>
+        <property name="build.dist.login.lib" location="${build.dist.login}/lib"/>
+        <property name="build.dist.game" location="${build.dist}/gameserver"/>
+        <property name="build.dist.game.lib" location="${build.dist.game}/lib"/>
+        <property name="build-version_core" location="${build.dist.game}/config/L2jPack_Version/L2jServerCoreVersion.ini"/>
+        <property name="build.dist.tools" location="${build.dist}/tools"/>
+    </target>
+    
+    <path id="classpath">
+        <fileset dir="${src-lib}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    
+    <target name="init" description="Create the output directories.">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${build.classes}"/>
+        <mkdir dir="${build.dist}"/>
+        <mkdir dir="${build.dist.login}"/>
+        <mkdir dir="${build.dist.login.lib}"/>
+        <mkdir dir="${build.dist.game}"/>
+        <mkdir dir="${build.dist.game.lib}"/>
+        <mkdir dir="${build.dist.tools}"/>
+    </target>
+    
+    <target name="compile" depends="version" description="Compile the sources.">
+        <javac destdir="${build.classes}" includeantruntime="false" optimize="on" source="1.8" target="1.8" encoding="utf-8" nowarn="off">
+            <src path="${src}"/>
+            <classpath refid="classpath"/>
+        </javac>
+    </target>
+    
+    <target name="jar" depends="compile" description="Create the jar file">
+        <jar destfile="${build}/L2jCore.jar">
+            <fileset dir="${build.classes}"/>
+        </jar>
+        
+        <copy todir="${build.dist.login.lib}">
+            <fileset dir="${build}">
+                <include name="L2jCore.jar"/>
+            </fileset>
+        </copy>
+        
+        <copy todir="${build.dist.game.lib}">
+            <fileset dir="${build}">
+                <include name="L2jCore.jar"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="export" depends="jar">
+        <copy todir="${build.dist.game.lib}">
+            <fileset dir="${src-lib}">
+                <include name="*.jar" />
+                <include name="*.txt" />
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.login.lib}">
+            <fileset dir="${src-lib}">
+                <include name="*.jar" />
+                <include name="*.txt" />
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.login}">
+            <fileset dir="dist">
+                <include name="AccountManager.bat"/>
+                <include name="Anti_DDOS.sh"/>
+                <include name="LoginServer_loop.sh"/>
+                <include name="RegisterGameServer.*"/>
+                <include name="StartLoginServer.bat"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}">
+            <fileset dir="dist">
+                <include name="GameServer_loop.sh"/>
+                <include name="StartGameServer.bat"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist}">
+            <fileset dir="dist">
+                <include name="Start_LoginServer_noScreen.sh"/>
+                <include name="Start_GameServer_noScreen.sh"/>
+            </fileset>
+        </copy>
+        
+        <mkdir dir="${build.dist.game}/log"/>
+        <mkdir dir="${build.dist.login}/log"/>
+        
+        <mkdir dir="${build.dist.login}/config"/>
+        <mkdir dir="${build.dist.login}/config/Server_Network"/>
+        <mkdir dir="${build.dist.login}/config/Server_Protected"/>
+        <mkdir dir="${build.dist.login}/config/Others_Settings"/>
+        
+        <mkdir dir="${build.dist.game}/config/Administrator_Settings"/>
+        <mkdir dir="${build.dist.game}/config/Developer_Settings"/>
+        <mkdir dir="${build.dist.game}/config/L2jLastWarrior_Settings"/>
+        <mkdir dir="${build.dist.game}/config/L2jPack_Version"/>
+        <mkdir dir="${build.dist.game}/config/Others_Settings"/>
+        <mkdir dir="${build.dist.game}/config/Server_Commands"/>
+        <mkdir dir="${build.dist.game}/config/Server_Events"/>
+        <mkdir dir="${build.dist.game}/config/Server_Loader"/>
+        <mkdir dir="${build.dist.game}/config/Server_Mods"/>
+        <mkdir dir="${build.dist.game}/config/Server_Network"/>
+        <mkdir dir="${build.dist.game}/config/Server_PowerPack"/>
+        <mkdir dir="${build.dist.game}/config/Server_PowerPack/webservices"/>
+        <mkdir dir="${build.dist.game}/config/Server_Protected"/>
+        <mkdir dir="${build.dist.game}/config/Server_Rates"/>
+        <mkdir dir="${build.dist.game}/config/Server_Settings"/>
+        
+        <!-- Starting copy the Configs files into GameServer -->
+        <copy todir="${build.dist.game}/config/Administrator_Settings">
+            <fileset dir="config/Administrator_Settings">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Developer_Settings">
+            <fileset dir="config/Developer_Settings">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/L2jLastWarrior_Settings">
+            <fileset dir="config/L2jLastWarrior_Settings">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/L2jPack_Version">
+            <fileset dir="config/L2jPack_Version">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Others_Settings">
+            <fileset dir="config/Others_Settings">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Commands">
+            <fileset dir="config/Server_Commands">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Events">
+            <fileset dir="config/Server_Events">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Loader">
+            <fileset dir="config/Server_Loader">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Mods">
+            <fileset dir="config/Server_Mods">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Network">
+            <fileset dir="config/Server_Network">
+                <include name="GameServer_Settings.ini"/>
+                <include name="IRC_Settings.ini"/>
+                <include name="Telnet_Settings.ini"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_PowerPack">
+            <fileset dir="config/Server_PowerPack">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_PowerPack/webservices">
+            <fileset dir="config/Server_PowerPack/webservices">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Protected">
+            <fileset dir="config/Server_Protected">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Rates">
+            <fileset dir="config/Server_Rates">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.game}/config/Server_Settings">
+            <fileset dir="config/Server_Settings">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        
+        <!--Starting copy the Configs files into LoginServer-->
+        <copy todir="${build.dist.login}/config/Others_Settings">
+            <fileset dir="config/Others_Settings">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.login}/Server_Network">
+            <fileset dir="config/Server_Network">
+                <include name="LoginServer_Settings.ini"/>
+                <include name="Telnet_Settings.ini"/>
+            </fileset>
+        </copy>
+        <copy todir="${build.dist.login}/Server_Protected">
+            <fileset dir="config/Server_Protected">
+                <include name="*.*"/>
+            </fileset>
+        </copy>
+        
+        <!-- Tools -->
+        <copy todir="${build.dist.tools}">
+            <fileset dir="dist">
+                <include name="DBInstallerGS.bat"/>
+                <include name="DBInstallerGS.sh"/>
+                <include name="DBInstallerLS.bat"/>
+                <include name="DBInstallerLS.sh"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="version" depends="init" description="Create Version File.">
+        <tstamp>
+            <format property="build.tstamp" pattern="dd-MM-yyyy"/>
+        </tstamp>
+        <concat destfile="${build-version_core}">
+            builddate=${build.tstamp}
+        </concat>
+    </target>
+    
+    <target name="dist-local" depends="prepare-local,prepare-final,export">
+        <zip destfile="${build}/L2jLastWarrior_CorePack.zip" basedir="${build.dist}" update="true"/>
+    </target>
+    
+    <target name="Create Core update" depends="prepare-local,prepare-final,init">
+        <javac destdir="${build.classes}" includeantruntime="false" optimize="on" source="1.8" target="1.8" encoding="utf-8" nowarn="off">
+            <src path="${src}"/>
+            <classpath refid="classpath"/>
+        </javac>
+        <jar destfile="${build}/L2jCore_update.jar">
+            <fileset dir="${build.classes}"/>
+        </jar>
+    </target>
+</project>
