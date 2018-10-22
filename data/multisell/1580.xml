@@ -1,0 +1,51 @@
+
+<list>
+<item id='0'>
+<ingredient id='10004' count='1'/>
+<production id='10007' count='1'/>
+</item>
+<item id='1'>
+<ingredient id='10004' count='1'/>
+<production id='10007' count='10'/>
+</item>
+<item id='2'>
+<ingredient id='10004' count='1'/>
+<production id='10007' count='25'/>
+</item>
+<item id='3'>
+<ingredient id='10004' count='1'/>
+<production id='10007' count='50'/>
+</item>
+<item id='4'>
+<ingredient id='10004' count='1'/>
+<production id='10007' count='100'/>
+</item>
+<item id='5'>
+<ingredient id='10004' count='1'/>
+<production id='10007' count='200'/>
+</item>
+<item id='6'>
+<ingredient id='10001' count='1'/>
+<production id='10007' count='1'/>
+</item>
+<item id='7'>
+<ingredient id='10001' count='1'/>
+<production id='10007' count='10'/>
+</item>
+<item id='8'>
+<ingredient id='10001' count='1'/>
+<production id='10007' count='25'/>
+</item>
+<item id='9'>
+<ingredient id='10001' count='1'/>
+<production id='10007' count='50'/>
+</item>
+<item id='10'>
+<ingredient id='10001' count='1'/>
+<production id='10007' count='100'/>
+</item>
+<item id='11'>
+<ingredient id='10001' count='1'/>
+<production id='10007' count='200'/>
+</item>
+</list>

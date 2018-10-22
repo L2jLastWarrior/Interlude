@@ -1,0 +1,18 @@
+<list>
+	<item id="1">
+		<production id="6622" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+	<item id="2">
+		<production id="5580" count="1"/>
+		<ingredient id="7198" count="20"/>
+	</item>
+	<item id="3">
+		<production id="5581" count="1"/>
+		<ingredient id="7198" count="20"/>
+	</item>
+	<item id="4">
+		<production id="5582" count="1"/>
+		<ingredient id="7198" count="20"/>
+	</item>
+</list>

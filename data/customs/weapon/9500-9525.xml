@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+<item id='9500' name="L][Division Akra Shield">
+  <for>
+    <sub val='8' order='0x10' stat='rEvas'/>
+    <set val='142' order='0x08' stat='sDef'/>
+    <set val='20' order='0x08' stat='rShld'/>
+    <enchant val='0' order='0x0C' stat='sDef'/>
+  </for>
+</item>
+<item id='9501' name="L][Division Dynaksus Shield">
+  <for>
+    <sub val='8' order='0x10' stat='rEvas'/>
+    <set val='142' order='0x08' stat='sDef'/>
+    <set val='20' order='0x08' stat='rShld'/>
+    <enchant val='0' order='0x0C' stat='sDef'/>
+  </for>
+</item>
+<item id='9502' name="L][Division Karyen Shield">
+  <for>
+    <sub val='8' order='0x10' stat='rEvas'/>
+    <set val='142' order='0x08' stat='sDef'/>
+    <set val='20' order='0x08' stat='rShld'/>
+    <enchant val='0' order='0x0C' stat='sDef'/>
+  </for>
+</item>
+<item id='9503' name="L][Division Sacon Shield">
+  <for>
+    <sub val='8' order='0x10' stat='rEvas'/>
+    <set val='142' order='0x08' stat='sDef'/>
+    <set val='20' order='0x08' stat='rShld'/>
+    <enchant val='0' order='0x0C' stat='sDef'/>
+  </for>
+</item>
+<item id='9504' name="L][Division Kirche Fists">
+<for>
+<set val='576' order='0x08' stat='pAtk'/>
+<set val='145' order='0x08' stat='mAtk'/>
+<set val='16' order='0x08' stat='rCrit'/>
+<add val='10' order='0x10' stat='accCombat'/>
+<set val='360' order='0x08' stat='pAtkSpd'/>
+<enchant val='5' order='0x0C' stat='pAtk'/>
+<enchant val='4' order='0x0C' stat='mAtk'/>
+</for>
+</item>
+<item id='9505' name="L][Division Grabathus Bow">
+<for>
+<set val='639' order='0x08' stat='pAtk'/>
+<set val='145' order='0x08' stat='mAtk'/>
+<set val='16' order='0x08' stat='rCrit'/>
+<add val='7' order='0x10' stat='accCombat'/>
+<set val='300' order='0x08' stat='pAtkSpd'/>
+<enchant val='5' order='0x0C' stat='pAtk'/>
+<enchant val='4' order='0x0C' stat='mAtk'/>
+</for>
+</item>
+<item id="9506" name="L][Division Lapis Crossbow">
+<for>
+<set val="794" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="12" order="0x08" stat="rCrit" />
+<add val="-3" order="0x10" stat="accCombat" />
+<set val="293" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9507" name="L][Division Shayaka Crossbow">
+<for>
+<set val="794" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="12" order="0x08" stat="rCrit" />
+<add val="-3" order="0x10" stat="accCombat" />
+<set val="293" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id='9508' name="L][Division Spina Dorsi Bow">
+<for>
+<set val='639' order='0x08' stat='pAtk'/>
+<set val='145' order='0x08' stat='mAtk'/>
+<set val='16' order='0x08' stat='rCrit'/>
+<add val='7' order='0x10' stat='accCombat'/>
+<set val='300' order='0x08' stat='pAtkSpd'/>
+<enchant val='5' order='0x0C' stat='pAtk'/>
+<enchant val='4' order='0x0C' stat='mAtk'/>
+</for>
+</item>
+<item id="9509" name="L][Division Grangkaz Staff">
+<for>
+<set val="332" order="0x08" stat="pAtk" />
+<set val="244" order="0x08" stat="mAtk" />
+<set val="4" order="0x08" stat="rCrit" />
+<add val="4" order="0x10" stat="accCombat" />
+<set val="379" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9510" name="L][Division Grave Spear">
+<for>
+<set val="415" order="0x08" stat="pAtk" />
+<set val="183" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="-3" order="0x10" stat="accCombat" />
+<set val="325" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9511" name="L][Division Herencia Staff">
+<for>
+<set val="332" order="0x08" stat="pAtk" />
+<set val="244" order="0x08" stat="mAtk" />
+<set val="4" order="0x08" stat="rCrit" />
+<add val="4" order="0x10" stat="accCombat" />
+<set val="379" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9512" name="L][Division Grave Spear">
+<for>
+<set val="415" order="0x08" stat="pAtk" />
+<set val="183" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="-3" order="0x10" stat="accCombat" />
+<set val="325" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9513" name="L][Division Fuego Hammer">
+		<for>
+			<set val="532" order="0x08" stat="pAtk" />
+			<set val="192" order="0x08" stat="mAtk" />
+			<set val="4" order="0x08" stat="rCrit" />
+			<add val="4" order="0x10" stat="accCombat" />
+			<set val="325" order="0x08" stat="pAtkSpd" />
+			<enchant val="0" order="0x0C" stat="pAtk" />
+			<enchant val="0" order="0x0C" stat="mAtk" />
+		</for>
+	</item>
+<item id="9514" name="L][Division Polion Sword">
+<for>
+<set val="473" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="2" order="0x10" stat="accCombat" />
+<set val="350" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9515" name="L][Division Volver Sword">
+<for>
+<set val="473" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="2" order="0x10" stat="accCombat" />
+<set val="350" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9516" name="L][Division Aspeda Dagger">
+<for>
+<set val="415" order="0x08" stat="pAtk" />
+<set val="183" order="0x08" stat="mAtk" />
+<set val="12" order="0x08" stat="rCrit" />
+<add val="-3" order="0x10" stat="accCombat" />
+<set val="433" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9517" name="L][Division Phasian Dagger">
+<for>
+<set val="415" order="0x08" stat="pAtk" />
+<set val="183" order="0x08" stat="mAtk" />
+<set val="12" order="0x08" stat="rCrit" />
+<add val="-3" order="0x10" stat="accCombat" />
+<set val="433" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9518" name="L][Division Estia Sword">
+<for>
+<set val="473" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="2" order="0x10" stat="accCombat" />
+<set val="350" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9519" name="L][Division Imerose Sword">
+<for>
+<set val="473" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="2" order="0x10" stat="accCombat" />
+<set val="350" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9520" name="L][Division Kaynon Sword">
+<for>
+<set val="473" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="2" order="0x10" stat="accCombat" />
+<set val="350" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9521" name="L][Division Pasis Sword">
+<for>
+<set val="473" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="8" order="0x08" stat="rCrit" />
+<add val="2" order="0x10" stat="accCombat" />
+<set val="350" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9522" name="L][Division Batista Hammer">
+<for>
+<set val="532" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="4" order="0x08" stat="rCrit" />
+<add val="4" order="0x10" stat="accCombat" />
+<set val="325" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9523" name="L][Division Raksilion Hammer">
+<for>	<set val="532" order="0x08" stat="pAtk" />
+<set val="192" order="0x08" stat="mAtk" />
+<set val="4" order="0x08" stat="rCrit" />
+<add val="4" order="0x10" stat="accCombat" />
+<set val="325" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9524" name="L][Division Kiabe Mace">
+<for>
+<set val="332" order="0x08" stat="pAtk" />
+<set val="244" order="0x08" stat="mAtk" />
+<set val="4" order="0x08" stat="rCrit" />
+<add val="4" order="0x10" stat="accCombat" />
+<set val="379" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+<item id="9525" name="L][Division Pilia Mace">
+<for>
+<set val="332" order="0x08" stat="pAtk" />
+<set val="244" order="0x08" stat="mAtk" />
+<set val="4" order="0x08" stat="rCrit" />
+<add val="4" order="0x10" stat="accCombat" />
+<set val="379" order="0x08" stat="pAtkSpd" />
+<enchant val="0" order="0x0C" stat="pAtk" />
+<enchant val="0" order="0x0C" stat="mAtk" />
+</for>
+</item>
+</list>	

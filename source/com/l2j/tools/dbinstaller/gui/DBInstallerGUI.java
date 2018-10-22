@@ -30,7 +30,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 import com.l2j.tools.dbinstaller.DBOutputInterface;
-import com.l2j.tools.dbinstaller.images.ImagesTable;
+import com.l2j.tools.images.ImagesTable;
 
 /**
  * @author mrTJO

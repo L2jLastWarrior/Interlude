@@ -1,27 +1,44 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (C) 2004-2016 L2J Server
+ * 
+ * This file is part of L2J Server.
+ * 
+ * L2J Server is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * L2J Server is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 package com.l2j.tools.dbinstaller;
 
 /**
- *
- * @author Konstantinos
+ * Abstract Database Launcher.
+ * @author Zoey76
  */
-public abstract class AbstractDBLauncher {
-    
-    protected static String getArg(String arg,String[] args){
-        try{
-            int i = 0;
-            do{
-                
-            }
-            while(!arg.equalsIgnoreCase(args[i++]));
-            return args[i];
-        }
-        catch(Exception ex){
-            return null;
-        }
-    }
+public abstract class AbstractDBLauncher
+{
+	protected static String getArg(String arg, String[] args)
+	{
+		try
+		{
+			int i = 0;
+			do
+			{
+				// Nothing is missing here.
+			}
+			while (!arg.equalsIgnoreCase(args[i++]));
+			return args[i];
+		}
+		catch (Exception e)
+		{
+			return null;
+		}
+	}
 }

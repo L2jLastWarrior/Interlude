@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 
 import com.l2j.Config;
 import com.l2j.FService;
-import com.l2j.DevTeam.L2jDevTeam;
+import com.l2j.developers.L2jDevTeam;
 import com.l2j.ServerType;
 import com.l2j.crypt.nProtect;
 import com.l2j.gameserver.ai.special.manager.AILoader;

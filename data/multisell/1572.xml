@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Red Seal Ston -->
+
+<list>
+<item id="1">
+    <production id="5575" count="10"/>
+    <ingredient id="6362" count="1"/>
+  </item>
+</list>

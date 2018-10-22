@@ -24,9 +24,9 @@ import java.util.prefs.Preferences;
 
 import javax.swing.JOptionPane;
 
-import com.l2j.util.mysql.DBDumper;
-import com.l2j.util.mysql.ScriptExecutor;
-import com.l2j.util.SqlEngine;
+import com.l2j.tools.dbinstaller.util.mysql.DBDumper;
+import com.l2j.tools.dbinstaller.util.mysql.ScriptExecutor;
+import com.l2j.util.file.filter.SQLFilter;
 
 /**
  * @author mrTJO
@@ -56,7 +56,7 @@ public class RunTasks extends Thread
 		
 		File clnFile = new File(_cleanUpFile);
 		File updDir = new File(_sqlDir, "updates");
-		File[] files = updDir.listFiles(new SqlEngine());
+		File[] files = updDir.listFiles(new SQLFilter());
 		
 		Preferences prefs = Preferences.userRoot();
 		

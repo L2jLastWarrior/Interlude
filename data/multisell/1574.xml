@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Exchange the equipment for pets with the high grade equipment -->
+<!-- This list is best used in exc_multisel -->
+<list>
+	<item id="1">
+		<production id="8166" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+	<item id="2">
+		<production id="8169" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+	<item id="3">
+		<production id="8172" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+	<item id="4">
+		<production id="8163" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+	<item id="5">
+		<production id="8160" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+	<item id="6">
+		<production id="8176" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+	<item id="7">
+		<production id="8175" count="1"/>
+		<ingredient id="7198" count="50"/>
+	</item>
+</list>

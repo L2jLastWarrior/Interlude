@@ -33,9 +33,9 @@ import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
 import com.l2j.tools.dbinstaller.RunTasks;
-import com.l2j.util.mysql.MySqlConnect;
-import com.l2j.util.mysql.swing.SpringUtilities;
-import com.l2j.tools.dbinstaller.images.ImagesTable;
+import com.l2j.tools.dbinstaller.util.mysql.MySqlConnect;
+import com.l2j.tools.dbinstaller.util.swing.SpringUtilities;
+import com.l2j.tools.images.ImagesTable;
 
 /**
  * @author mrTJO
