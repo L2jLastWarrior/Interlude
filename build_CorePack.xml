@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="L2jLastWarrior_CorePack" default="dist-local" basedir=".">
+<project name="L2jLastWarrior" default="dist-local" basedir=".">
     <description>
         
     </description>
@@ -217,13 +217,13 @@
                 <include name="*.*"/>
             </fileset>
         </copy>
-        <copy todir="${build.dist.login}/Server_Network">
+        <copy todir="${build.dist.login}/config/Server_Network">
             <fileset dir="config/Server_Network">
                 <include name="LoginServer_Settings.ini"/>
                 <include name="Telnet_Settings.ini"/>
             </fileset>
         </copy>
-        <copy todir="${build.dist.login}/Server_Protected">
+        <copy todir="${build.dist.login}/config/Server_Protected">
             <fileset dir="config/Server_Protected">
                 <include name="*.*"/>
             </fileset>

@@ -1,0 +1,39 @@
+<html><body><title>Add item</title>
+<center>
+<br><img src="L2UI_CH3.herotower_deco" width=256 height=32>
+<table>
+<tr>
+	<td align=center><font color="LEVEL">Marketer:</font></td>
+</tr>
+
+<tr>
+	<td><font color="LEVEL"><br1>Enter Quantity</font></td>
+</tr>
+</table>
+
+<table>
+<tr>
+	<td>    <edit var="count" width=135> <center>Max of %aval%</center><br></td>
+</tr>
+<tr>
+	<td>Enter Price (for each item):</td><br>
+</tr>
+<tr>
+	<td><edit var="price" width=135><br></td>
+</tr>
+
+<tr>
+	<td><button value="Enter" action="bypass -h npc_%objectId%_ComfirmAdd %itemObjId% $count $price" width=135 height=24 back="L2UI_CH3.bigbutton3_down" fore="L2UI_CH3.bigbutton3"></td>
+</tr>
+<tr>
+	<td><button value="Cancel" action="bypass -h npc_%objectId%_Link marketer/deal.htm" width=135 height=24 back="L2UI_CH3.bigbutton3_down" fore="L2UI_CH3.bigbutton3"></td>
+</tr>
+</table>
+<img src="L2UI_CH3.herotower_deco" width=256 height=32><br>
+<table>
+<tr>
+<td>
+
+<button value="Back" action="bypass -h npc_%objectId%_Link marketer/main.htm" width=135 height=24 back="L2UI_CH3.bigbutton3_down" fore="L2UI_CH3.bigbutton3"></td></tr>
+</center>
+</body></html>
