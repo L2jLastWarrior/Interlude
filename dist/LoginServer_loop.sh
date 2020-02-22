@@ -1,5 +1,4 @@
 #!/bin/bash
-cd /home/user/server/loginserver
 err=1
 until [ $err == 0 ]; 
 do
@@ -7,6 +6,5 @@ do
    [ -f log/stdout.log ] && mv log/stdout.log "log/`date +%Y-%m-%d_%H-%M-%S`_stdout.log"
    java -Xmx256m -XX:+UseSerialGC -XX:+AggressiveOpts -cp lib/*:L2jCore.jar com.l2j.loginserver.L2LoginServer > log/stdout.log 2>&1
    err=$?
-#   /etc/init.d/mysql restart
    sleep 10;
 done
