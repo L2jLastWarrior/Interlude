@@ -36,7 +36,7 @@ import com.l2j.gameserver.templates.L2NpcTemplate;
 
 public class L2DonateInstance extends L2FolkInstance
 {
-	private static boolean ENABLE_DONATE_NPC = Config.DONATION_SYSTEM;
+	private static boolean ENABLE_DONATE_NPC = Config.ENABLE_DONATE_NPC;
 	
 	public L2DonateInstance(int objectId, L2NpcTemplate template)
 	{

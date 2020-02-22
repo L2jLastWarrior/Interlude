@@ -67,6 +67,7 @@ public class FService
 	public static final String HEXID_FILE = "./config/Server_Loader/hexid.txt";
 	
 	//Server Mods Configs
+        public static final String DONATE_NPC_FILE = "./config/Server_Mods/Donate_Settings.ini";
 	public static final String EVENT_CHAMPION_FILE = "./config/Server_Mods/Champion_Settings.ini";
 	public static final String SPECIAL_CLAN_MANAGER_FILE = "./config/Server_Mods/Clan_Manager_Settings.ini";
 	public static final String ENGRAVER_NPC_FILE = "./config/Server_Mods/Engrave_Settings.ini";

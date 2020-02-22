@@ -52,6 +52,7 @@ import com.l2j.gameserver.templates.L2Item;
 import com.l2j.gameserver.util.FloodProtectorConfig;
 import com.l2j.loginserver.LoginController;
 import com.l2j.util.StringUtil;
+import java.util.concurrent.ExecutionException;
 
 public final class Config
 {
@@ -1916,8 +1917,6 @@ public final class Config
 	public static int AI_MAX_THREAD;
 	public static boolean LAZY_CACHE;
 	public static boolean ENABLE_CACHE_INFO = false;
-	public static boolean DONATION_SYSTEM;
-
 	//============================================================
 	public static void loadDevConfig()
 	{
@@ -1979,8 +1978,6 @@ public final class Config
 			GENERAL_THREAD_CORE_SIZE = Integer.parseInt(devSettings.getProperty("GeneralThreadCoreSize", "4"));
 
 			LAZY_CACHE = Boolean.valueOf(devSettings.getProperty("LazyCache", "False"));
-			
-			DONATION_SYSTEM = Boolean.parseBoolean(devSettings.getProperty("D.P.S.S", "False"));
 		}
 		catch(Exception e)
 		{
@@ -5276,6 +5273,27 @@ public final class Config
 		public static boolean ENABLE_ABILITY_SYSTEM = false;
 		public static boolean ALLOW_ALL_CLASS_TO_TAKE_ALL_POWERS;
 		//===========================================================================================================
+                
+                //Donate NPC
+                //===========================================================================================================
+                public static boolean ENABLE_DONATE_NPC;
+                //===========================================================================================================
+                public static void loadDonateNPCConfig(){
+                    final String DONATENPC_SETTINGS = FService.DONATE_NPC_FILE;
+                    
+                    try{
+                        Properties DonateNpcSettings = new Properties();
+                        InputStream is = new FileInputStream(new File(DONATENPC_SETTINGS));
+                        DonateNpcSettings.load(is);
+                        is.close();
+                        
+                        ENABLE_DONATE_NPC = Boolean.parseBoolean(DonateNpcSettings.getProperty("EnableDonate", "False"));
+                    }
+                    catch(Exception e){
+                        e.printStackTrace();
+                        throw new Error("Failed to Load " + DONATENPC_SETTINGS + " File.");
+                    }
+                }
 	
 	/** Enumeration for type of ID Factory */
 	public static enum IdFactoryType
@@ -5334,6 +5352,7 @@ public final class Config
 			loadHexed();
 			loadIdFactoryConfig();
 			//Mods Settings Load
+                        loadDonateNPCConfig();
 			loadChampionConfig();
 			loadWeddingConfig();
 			loadREBIRTHConfig();
