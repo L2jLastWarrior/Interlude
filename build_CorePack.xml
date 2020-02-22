@@ -254,11 +254,14 @@
     </target>
     
     <target name="Create Core update" depends="prepare-local,prepare-final,init">
+        <tstamp>
+            <format property="build.tstamp" pattern="dd-MM-yyyy"/>
+        </tstamp>
         <javac destdir="${build.classes}" includeantruntime="false" optimize="on" source="1.8" target="1.8" encoding="utf-8" nowarn="off">
             <src path="${src}"/>
             <classpath refid="classpath"/>
         </javac>
-        <jar destfile="${build}/L2jCore_update.jar">
+        <jar destfile="${build}/L2jCore_update_${build.tstamp}.jar">
             <fileset dir="${build.classes}"/>
         </jar>
     </target>
