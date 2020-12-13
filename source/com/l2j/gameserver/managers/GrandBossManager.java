@@ -50,7 +50,6 @@ import com.l2j.util.database.L2DatabaseFactory;
  * <li>29028        Valakas</li>
  * <li>29045        Frintezza</li>
  * <li>29046-29047  Scarlet van Halisha</li>
- * <li>1582-1584  Division</li>
  * </ul>
  *
  * It handles the saving of hp, mp, location, and status of all Grand Bosses. It also manages the zones associated with the Grand Bosses.

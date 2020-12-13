@@ -285,9 +285,9 @@ public class ZoneData
 									temp = new L2SwampZone(zoneId);
 								}
 								//Flag Zone
-								else if(zoneType.equals("PvpFlagZone"))
+								else if(zoneType.equals("PvPFlagZone"))
 								{
-									temp = new L2PvPZone(1564);
+									temp = new L2PvPZone(zoneId);
 								}
 
 								// Check for unknown type

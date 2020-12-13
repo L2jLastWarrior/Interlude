@@ -472,22 +472,6 @@ public class NpcTable
 
 				}
 					break;
-					/*
-				case 1583: //Division Minion
-				case 1584: //Division Minion
-					minion = true;
-				case 1582: //Division 
-				{
-					if(Config.DIVISION_LEVEL > 0)
-					{
-						diff = Config.DIVISION_LEVEL - NpcData.getInt("level");
-						level = Config.DIVISION_LEVEL;
-					}
-					else
-						level = NpcData.getInt("level");
-				}
-					break;
-					*/
 				case 29022:
 				{ //zaken
 

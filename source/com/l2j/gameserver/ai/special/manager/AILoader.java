@@ -24,7 +24,6 @@ import com.l2j.gameserver.ai.special.Antharas_l2j;
 import com.l2j.gameserver.ai.special.Baium_l2j;
 import com.l2j.gameserver.ai.special.Barakiel;
 import com.l2j.gameserver.ai.special.Core;
-import com.l2j.gameserver.ai.special.Division;
 import com.l2j.gameserver.ai.special.FairyTrees;
 import com.l2j.gameserver.ai.special.Frintezza_l2j;
 import com.l2j.gameserver.ai.special.Golkonda;
@@ -97,7 +96,5 @@ public class AILoader
 		ThreadPoolManager.getInstance().scheduleAi(new Frintezza_l2j(-1, "Frintezza", "ai"), 2000);
 		_log.info(" - Valakas");
 		ThreadPoolManager.getInstance().scheduleAi(new Valakas_l2j(-1, "valakas", "ai"), 2100);	
-		_log.info(" - Division");
-		ThreadPoolManager.getInstance().scheduleAi(new Division(-1, "Division", "ai"), 1800);
 	}
 }

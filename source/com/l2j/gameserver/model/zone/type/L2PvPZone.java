@@ -32,7 +32,7 @@ import com.l2j.gameserver.network.serverpackets.SystemMessage;
 /*
 How to create an PvPZone - Flag Zone:
 
-<zone id="1564" type="ZONE_FLAG_PVP" shape="NPoly" minZ="-3600" maxZ="-3400">
+<zone id="1564" type="PvPFlagZone" shape="NPoly" minZ="-3600" maxZ="-3400">
     <stat name="isPeaceZone" val="false" />
     <spawn X="x" Y="y" Z="z" /> 
 </zone>

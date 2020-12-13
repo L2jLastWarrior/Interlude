@@ -283,11 +283,6 @@ public class EnterWorld extends L2GameClientPacket
 		// Welcome to Lineage II
 		sendPacket(new SystemMessage(SystemMessageId.WELCOME_TO_LINEAGE));
 		
-		/*
-		 * Critical Error 
-		 * sendPacket(new SystemMessage(SystemMessageId.WELCOME_TO_WWW_L2DIVISION_EU_PLEASE_READ_CAREFULLY_OUR_RULES_AND_HAVE_A_NICE_GAME));
-		 */
-		
 		teamliences(activeChar);
 		
 		setAdminGMSkills(activeChar);

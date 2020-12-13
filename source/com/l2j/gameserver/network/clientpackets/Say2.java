@@ -40,7 +40,6 @@ import com.l2j.gameserver.network.SystemMessageId;
 import com.l2j.gameserver.network.serverpackets.CreatureSay;
 import com.l2j.gameserver.network.serverpackets.SocialAction;
 import com.l2j.gameserver.network.serverpackets.SystemMessage;
-import com.l2j.gameserver.powerpack.PowerPack;
 import com.l2j.gameserver.util.Util;
 
 public final class Say2 extends L2GameClientPacket
@@ -250,9 +249,6 @@ public final class Say2 extends L2GameClientPacket
 				activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 5));
 		
 		}
-		
-		// by Azagthtot
-		PowerPack.getInstance().chatHandler(activeChar, _type, _text);
 		//CreatureSay cs = new CreatureSay(activeChar.getObjectId(),_type, activeChar.getName(), _text);
 
 		L2Object saymode = activeChar.getSayMode();

@@ -81,11 +81,9 @@ import com.l2j.gameserver.geo.pathfinding.PathFinding;
 import com.l2j.gameserver.handler.AdminCommandHandler;
 import com.l2j.gameserver.handler.AutoAnnouncementHandler;
 import com.l2j.gameserver.handler.AutoChatHandler;
-import com.l2j.gameserver.handler.AutoVoteRewardHandler;
 import com.l2j.gameserver.handler.ItemHandler;
 import com.l2j.gameserver.handler.SkillHandler;
 import com.l2j.gameserver.handler.UserCommandHandler;
-import com.l2j.gameserver.handler.VoicedCommandHandler;
 import com.l2j.gameserver.idfactory.IdFactory;
 import com.l2j.gameserver.managers.AuctionManager;
 import com.l2j.gameserver.managers.AutoSaveManager;
@@ -131,17 +129,6 @@ import com.l2j.gameserver.model.multisell.L2Multisell;
 import com.l2j.gameserver.model.spawn.AutoSpawn;
 import com.l2j.gameserver.network.L2GameClient;
 import com.l2j.gameserver.network.L2GamePacketHandler;
-import com.l2j.gameserver.powerpack.PowerPack;
-import com.l2j.gameserver.powerpack.Buffer.BuffHandler;
-import com.l2j.gameserver.powerpack.Buffer.BuffTable;
-import com.l2j.gameserver.powerpack.RaidInfo.RaidInfoHandler;
-import com.l2j.gameserver.powerpack.Servers.WebServer;
-import com.l2j.gameserver.powerpack.engrave.EngraveManager;
-import com.l2j.gameserver.powerpack.globalGK.GKHandler;
-import com.l2j.gameserver.powerpack.gmshop.GMShop;
-import com.l2j.gameserver.powerpack.vote.L2TopDeamon;
-import com.l2j.gameserver.powerpack.xmlrpc.XMLRPCServer;
-import com.l2j.gameserver.powerpack.vote.L2TopDeamon;
 import com.l2j.gameserver.script.EventDroplist;
 import com.l2j.gameserver.script.faenor.FaenorScriptEngine;
 import com.l2j.gameserver.scripting.CompiledScriptCache;
@@ -158,11 +145,9 @@ import com.l2j.netcore.SelectorConfig;
 import com.l2j.netcore.SelectorThread;
 import com.l2j.status.Status;
 import com.l2j.util.IPv4Filter;
-import com.l2j.util.Memory;
 import com.l2j.util.Util;
 import com.l2j.util.database.L2DatabaseFactory;
 
-import com.l2j.Config;
 import com.l2j.gameserver.communitybbs.CommunityBoard;
 import com.l2j.gameserver.datatables.BufferSkillsTable;
 import com.l2j.gameserver.datatables.CharSchemesTable;
@@ -170,16 +155,13 @@ import com.l2j.gameserver.handler.AutoVoteRewardHandler;
 import com.l2j.gameserver.handler.VoicedCommandHandler;
 import com.l2j.gameserver.handler.custom.CustomBypassHandler;
 import com.l2j.gameserver.handler.voicedcommandhandlers.Repair;
-import com.l2j.gameserver.model.actor.instance.L2PcInstance;
 import com.l2j.gameserver.powerpack.Buffer.BuffHandler;
 import com.l2j.gameserver.powerpack.Buffer.BuffTable;
 import com.l2j.gameserver.powerpack.RaidInfo.RaidInfoHandler;
-import com.l2j.gameserver.powerpack.Servers.WebServer;
 import com.l2j.gameserver.powerpack.engrave.EngraveManager;
 import com.l2j.gameserver.powerpack.globalGK.GKHandler;
 import com.l2j.gameserver.powerpack.gmshop.GMShop;
 import com.l2j.gameserver.powerpack.vote.L2TopDeamon;
-import com.l2j.gameserver.powerpack.xmlrpc.XMLRPCServer;
 
 public class GameServer
 {
@@ -493,19 +475,6 @@ public class GameServer
 			doorTable.getDoor(23180005).openMe();
 			doorTable.getDoor(23180006).openMe();
 			doorTable.checkAutoOpen();
-			if (Config.CUSTOM_DOORS_OPEN)
-			{
-			doorTable.CustomDoorsOpen();
-			doorTable.getDoor(24140007).openMe();
-			doorTable.getDoor(24140008).openMe();
-			doorTable.getDoor(23150003).openMe();
-			doorTable.getDoor(23150004).openMe();
-			doorTable.getDoor(24190001).closeMe();
-			doorTable.getDoor(24190004).closeMe();
-			_log.info("Custom PvP Zone Doors is Open!");
-			}
-			else
-				_log.info("Custom PvP Zone Doors is Closed!");
 			doorTable = null;
 		}
 		catch (NullPointerException e)
@@ -697,19 +666,7 @@ public class GameServer
 		
 		Util.printSection("Power Pack");
 		
-		if(Config.WEBSERVER_ENABLED)
-			{
-				WebServer.getInstance();
-				_log.info("WEBSERVER is Enabled.");
-			}
-			
-			if(Config.XMLRPC_ENABLED)
-			{
-				XMLRPCServer.getInstance();
-				_log.info("XMLRPC is Enabled.");
-			}
-			
-			if(Config.AUTOVOTEREWARD_ENABLED)
+                        if(Config.AUTOVOTEREWARD_ENABLED)
 			{
 				AutoVoteRewardHandler.getInstance();
 				_log.info("Auto Vote System is Enabled.");

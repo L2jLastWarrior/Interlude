@@ -127,7 +127,6 @@
         <mkdir dir="${build.dist.game}/config/Server_Mods"/>
         <mkdir dir="${build.dist.game}/config/Server_Network"/>
         <mkdir dir="${build.dist.game}/config/Server_PowerPack"/>
-        <mkdir dir="${build.dist.game}/config/Server_PowerPack/webservices"/>
         <mkdir dir="${build.dist.game}/config/Server_Protected"/>
         <mkdir dir="${build.dist.game}/config/Server_Rates"/>
         <mkdir dir="${build.dist.game}/config/Server_Settings"/>
@@ -187,11 +186,6 @@
         </copy>
         <copy todir="${build.dist.game}/config/Server_PowerPack">
             <fileset dir="config/Server_PowerPack">
-                <include name="*.*"/>
-            </fileset>
-        </copy>
-        <copy todir="${build.dist.game}/config/Server_PowerPack/webservices">
-            <fileset dir="config/Server_PowerPack/webservices">
                 <include name="*.*"/>
             </fileset>
         </copy>

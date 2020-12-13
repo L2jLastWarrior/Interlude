@@ -2394,7 +2394,6 @@ public final class Config
 	public static String FARM2_CUSTOM_MESSAGE;
 	public static String PVP1_CUSTOM_MESSAGE;
 	public static String PVP2_CUSTOM_MESSAGE;
-	public static boolean CUSTOM_DOORS_OPEN;
 	public static boolean WORLD_MASTER;
 	public static int KARMA_POLICE_ID;//Defailt ID=31034	
 	//============================================================
@@ -2517,7 +2516,6 @@ public final class Config
 			FARM2_CUSTOM_MESSAGE = L2JLastWarriorSettings.getProperty("Farm2CustomMeesage", "You have been teleported to Farm Zone 2!");
 			PVP1_CUSTOM_MESSAGE = L2JLastWarriorSettings.getProperty("PvP1CustomMeesage", "You have been teleported to PvP Zone 1!");
 			PVP2_CUSTOM_MESSAGE = L2JLastWarriorSettings.getProperty("PvP2CustomMeesage", "You have been teleported to PvP Zone 2!");
-			CUSTOM_DOORS_OPEN = Boolean.valueOf(L2JLastWarriorSettings.getProperty("CustomDoorOpen", "False"));
 			WORLD_MASTER = Boolean.valueOf(L2JLastWarriorSettings.getProperty("WorldMaster", "False"));
 		}
 		catch(Exception e)
@@ -5141,45 +5139,6 @@ public final class Config
 		}
 		//===================================================================================================================
 		
-		// Webserver/XMLRPC
-		//==========================================================================================================
-		/* XMLRPC */
-		public static boolean XMLRPC_ENABLED;
-		public static int XMLRPC_PORT;
-		public static String XMLRPC_HOST;
-		
-		/* WebServer */
-		public static boolean WEBSERVER_ENABLED;
-		public static int WEBSERVER_PORT;
-		public static String WEBSERVER_HOST;
-		//========================================================================================================
-		public static void loadWebserverConfig()
-		{
-			final String WEBSERVER_XMLRPC = FService.WEBSERVER_XMLRPC_FILE;
-			
-			try
-			{
-				Properties Webserver_XmlrpcSettings = new Properties();
-				InputStream is = new FileInputStream(new File(WEBSERVER_XMLRPC));
-				Webserver_XmlrpcSettings.load(is);
-				is.close();
-				
-				XMLRPC_ENABLED = Boolean.parseBoolean(Webserver_XmlrpcSettings.getProperty("XMLRPCEnabled", "true"));
-				XMLRPC_HOST = Webserver_XmlrpcSettings.getProperty("XMLRPCHost", "localhost");
-				XMLRPC_PORT = Integer.parseInt(Webserver_XmlrpcSettings.getProperty("XMLRPCPort", "7000"));
-
-				WEBSERVER_ENABLED = Boolean.parseBoolean(Webserver_XmlrpcSettings.getProperty("WebServerEnabled","true"));
-				WEBSERVER_HOST = Webserver_XmlrpcSettings.getProperty("WebServerHost","localhost");
-				WEBSERVER_PORT = Integer.parseInt(Webserver_XmlrpcSettings.getProperty("WebServerPort","8080"));
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-				throw new Error("Failed to Load " + WEBSERVER_XMLRPC + " File.");
-			}
-		}
-		//========================================================================================================
-		
 		//Social Action CMD
 		//=========================================================================================================
 		public static boolean ENABLE_SAY_SOCIAL_ACTIONS;
@@ -5230,50 +5189,7 @@ public final class Config
 			}
 		}
 		//==========================================================================================================
-		
-		//Custom RaidBoss(Division)
-		//==========================================================================================================
-		public static int DIVISION_RESP_HEALER;
-		public static int DIVISION_RESP_GUARD;
-		public static int DIVISION_RESP_FIRST;
-		public static int DIVISION_RESP_SECOND;
-		public static int DIVISION_LEVEL;
-		public static int DIVISION_RING_CHANCE;
-		public static float DIVISION_POWER_MULTIPLIER;
-		//==========================================================================================================
-		public static void loadCustomRaidBossDivisionConfig()
-		{
-			final String CUSTOMRAIDBOSSDIVISION_SETTINGS = FService.CUSTOMRAIDBOSSDIVISION_SETTINGS_FILE;
-			try
-			{
-				Properties CustomRaidBossDivisionSettings = new Properties();
-				InputStream is = new FileInputStream(new File(CUSTOMRAIDBOSSDIVISION_SETTINGS));
-				CustomRaidBossDivisionSettings.load(is);
-				is.close();
-				
-				DIVISION_RESP_HEALER = Integer.parseInt(CustomRaidBossDivisionSettings.getProperty("DivisionRespHealer", "60"));
-				DIVISION_RESP_GUARD = Integer.parseInt(CustomRaidBossDivisionSettings.getProperty("DivisionRespGuard", "120"));
-				DIVISION_RESP_FIRST = Integer.parseInt(CustomRaidBossDivisionSettings.getProperty("DivisionRespFirst", "19"));
-				DIVISION_RESP_SECOND = Integer.parseInt(CustomRaidBossDivisionSettings.getProperty("DivisionRespSecond", "35"));
-				DIVISION_LEVEL = Integer.parseInt(CustomRaidBossDivisionSettings.getProperty("DivisionLevel", "0"));
-				DIVISION_RING_CHANCE = Integer.parseInt(CustomRaidBossDivisionSettings.getProperty("DivisionRingChance", "0"));
-				DIVISION_POWER_MULTIPLIER = Float.parseFloat(CustomRaidBossDivisionSettings.getProperty("DivisionPowerMultiplier", "1.0"));
-				
-			}
-			catch (Exception e)
-			{
-				e.printStackTrace();
-				throw new Error("Failed to Load " + CUSTOMRAIDBOSSDIVISION_SETTINGS + " File.");
-			}
-		}
-		//===========================================================================================================
-		
-		//Ability System(BETA)
-		//===========================================================================================================
-		public static boolean ENABLE_ABILITY_SYSTEM = false;
-		public static boolean ALLOW_ALL_CLASS_TO_TAKE_ALL_POWERS;
-		//===========================================================================================================
-                
+		                
                 //Donate NPC
                 //===========================================================================================================
                 public static boolean ENABLE_DONATE_NPC;
@@ -5372,7 +5288,6 @@ public final class Config
 			loadCustomNoblessItemConfig();
 			loadCustomReputationClanItemConfig();
 			loadPowerPackConfig();
-			loadWebserverConfig();
 			//Protected Settings Load
 			loadFloodConfig();
 			loadPacketConfig();
@@ -5385,7 +5300,6 @@ public final class Config
 			//General Settings Load
 			loadAltConfig();
 			loadBossConfig();
-			loadCustomRaidBossDivisionConfig();//Custom RAIDBOSS LOAD xD
 			loadCHConfig();
 			loadElitCHConfig();
 			//*Fort Settings Load via manager

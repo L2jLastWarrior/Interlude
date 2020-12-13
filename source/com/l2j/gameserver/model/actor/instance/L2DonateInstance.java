@@ -108,7 +108,7 @@ public class L2DonateInstance extends L2FolkInstance
 		    		 BufferedWriter out = new BufferedWriter(fstream);
 		    		 out.write("Character Info: [Character: "+ player.getName() +"["+ player.getObjectId()+"] - Account: "+ player.getAccountName()+" - IP: "+player.getClient().getConnection().getInetAddress().getHostAddress()+"]\nMessage : donate "+ amount +" "+ message + " "+ pin1+ " "+ pin2+ " "+ pin3+ " "+ pin4);
 		    		 out.close();
-		    		 player.sendMessage("Thank you for your donation.All the items that you order will be tranfer to your account in the next 1~5 hours.Thank you for supporting our server.FOR ANY PROBLEM CONTACT WITH L][Division Team AT L2protocol@hotmail.gr");
+		    		 player.sendMessage("Thank you for your donation.All the items that you order will be tranfer to your account in the next 1~5 hours.Thank you for supporting our server.FOR ANY PROBLEM CONTACT WITH L2jLastWarrior Team AT lastwarrior@hotmail.gr");
 		    		 
 		    		 Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers();
 		    			 for (L2PcInstance gms : pls)
