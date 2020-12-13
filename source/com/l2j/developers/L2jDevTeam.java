@@ -39,7 +39,7 @@ public class L2jDevTeam
 		_log.info("#       #    # #    #   #   #  #  # #    # #   #  #   #  # #    # #   #  ");
 		_log.info("####### #    #  ####    #    ## ##  #    # #    # #    # #  ####  #    # ");
 		_log.info("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
-		_log.info("Server Core Version:1.2.0 - last update 19.02.20 - L2jLastWarriorDevTeam");
+		_log.info("Server Core Version:1.2.1 - last update 13.12.20 - L2jLastWarriorDevTeam");
 		_log.info("-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-");
 	}
 }
