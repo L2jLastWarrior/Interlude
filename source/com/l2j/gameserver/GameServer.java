@@ -41,6 +41,7 @@ import com.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2j.gameserver.controllers.GameTimeController;
 import com.l2j.gameserver.controllers.RecipeController;
 import com.l2j.gameserver.controllers.TradeController;
+import com.l2j.gameserver.datatables.BuffTable;
 import com.l2j.gameserver.datatables.GmListTable;
 import com.l2j.gameserver.datatables.HeroSkillTable;
 import com.l2j.gameserver.datatables.NobleSkillTable;
@@ -81,9 +82,12 @@ import com.l2j.gameserver.geo.pathfinding.PathFinding;
 import com.l2j.gameserver.handler.AdminCommandHandler;
 import com.l2j.gameserver.handler.AutoAnnouncementHandler;
 import com.l2j.gameserver.handler.AutoChatHandler;
+import com.l2j.gameserver.handler.GKHandler;
+import com.l2j.gameserver.handler.GMShopHandler;
 import com.l2j.gameserver.handler.ItemHandler;
 import com.l2j.gameserver.handler.SkillHandler;
 import com.l2j.gameserver.handler.UserCommandHandler;
+import com.l2j.gameserver.handler.RaidInfoHandler;
 import com.l2j.gameserver.idfactory.IdFactory;
 import com.l2j.gameserver.managers.AuctionManager;
 import com.l2j.gameserver.managers.AutoSaveManager;
@@ -152,15 +156,11 @@ import com.l2j.gameserver.communitybbs.CommunityBoard;
 import com.l2j.gameserver.datatables.BufferSkillsTable;
 import com.l2j.gameserver.datatables.CharSchemesTable;
 import com.l2j.gameserver.handler.AutoVoteRewardHandler;
+import com.l2j.gameserver.handler.BuffHandler;
 import com.l2j.gameserver.handler.VoicedCommandHandler;
 import com.l2j.gameserver.handler.custom.CustomBypassHandler;
 import com.l2j.gameserver.handler.voicedcommandhandlers.Repair;
-import com.l2j.gameserver.powerpack.Buffer.BuffHandler;
-import com.l2j.gameserver.powerpack.Buffer.BuffTable;
-import com.l2j.gameserver.powerpack.RaidInfo.RaidInfoHandler;
 import com.l2j.gameserver.powerpack.engrave.EngraveManager;
-import com.l2j.gameserver.powerpack.globalGK.GKHandler;
-import com.l2j.gameserver.powerpack.gmshop.GMShop;
 import com.l2j.gameserver.powerpack.vote.L2TopDeamon;
 
 public class GameServer
@@ -611,7 +611,7 @@ public class GameServer
 			
 			if(Config.GMSHOP_ENABLED)
 			{
-				GMShop gs = new GMShop();
+				GMShopHandler gs = new GMShopHandler();
 				CustomBypassHandler.getInstance().registerCustomBypassHandler(gs);
 				if(Config.GLOBALGK_COMMAND!=null && Config.GLOBALGK_COMMAND.length()>0)
 				{

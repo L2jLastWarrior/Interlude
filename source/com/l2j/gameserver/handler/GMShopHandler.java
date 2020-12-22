@@ -16,13 +16,10 @@
  *
  * http://www.gnu.org/copyleft/gpl.html
  */
-package com.l2j.gameserver.powerpack.gmshop;
+package com.l2j.gameserver.handler;
 
 import com.l2j.Config;
 import com.l2j.gameserver.cache.HtmCache;
-import com.l2j.gameserver.handler.IBBSHandler;
-import com.l2j.gameserver.handler.ICustomByPassHandler;
-import com.l2j.gameserver.handler.IVoicedCommandHandler;
 import com.l2j.gameserver.model.L2Character;
 import com.l2j.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2j.gameserver.model.actor.instance.L2PcInstance;
@@ -37,7 +34,7 @@ import com.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 /**
  * @author L2JLastWarrior
  */
-public class GMShop implements IVoicedCommandHandler, ICustomByPassHandler, IBBSHandler
+public class GMShopHandler implements IVoicedCommandHandler, ICustomByPassHandler, IBBSHandler
 {
 
 	@Override

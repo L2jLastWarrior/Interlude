@@ -88,7 +88,6 @@ import com.l2j.gameserver.network.serverpackets.SocialAction;
 import com.l2j.gameserver.network.serverpackets.StatusUpdate;
 import com.l2j.gameserver.network.serverpackets.SystemMessage;
 import com.l2j.gameserver.network.serverpackets.ValidateLocation;
-import com.l2j.gameserver.powerpack.Buffer.L2BufferInstance;
 import com.l2j.gameserver.skills.Stats;
 import com.l2j.gameserver.taskmanager.DecayTaskManager;
 import com.l2j.gameserver.templates.L2HelperBuff;

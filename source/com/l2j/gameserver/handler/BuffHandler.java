@@ -16,7 +16,7 @@
  *
  * http://www.gnu.org/copyleft/gpl.html
  */
-package com.l2j.gameserver.powerpack.Buffer;
+package com.l2j.gameserver.handler;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -30,11 +30,10 @@ import com.l2j.Config;
 import com.l2j.gameserver.cache.HtmCache;
 import com.l2j.gameserver.communitybbs.Manager.BaseBBSManager;
 import com.l2j.gameserver.datatables.BufferSkillsTable;
+import com.l2j.gameserver.datatables.BuffTable;
+import com.l2j.gameserver.datatables.BuffTable.Buff;
 import com.l2j.gameserver.datatables.CharSchemesTable;
 import com.l2j.gameserver.datatables.SkillTable;
-import com.l2j.gameserver.handler.IBBSHandler;
-import com.l2j.gameserver.handler.ICustomByPassHandler;
-import com.l2j.gameserver.handler.IVoicedCommandHandler;
 import com.l2j.gameserver.model.L2Character;
 import com.l2j.gameserver.model.L2Effect;
 import com.l2j.gameserver.model.L2Skill;
@@ -45,7 +44,6 @@ import com.l2j.gameserver.model.entity.event.DM;
 import com.l2j.gameserver.model.entity.event.TvT;
 import com.l2j.gameserver.model.entity.olympiad.Olympiad;
 import com.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2j.gameserver.powerpack.Buffer.BuffTable.Buff;
 import com.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 
 /**
@@ -929,9 +927,8 @@ public class BuffHandler implements IVoicedCommandHandler, ICustomByPassHandler,
 		if (Config.NPCBUFFER_STATIC_BUFF_COST >= 0)
 			return list.size() * Config.NPCBUFFER_STATIC_BUFF_COST;
 		for (L2Skill sk : list)
-			fee += BufferSkillsTable.getInstance().getSkillFee(sk.getId());
+			fee += BufferSkillsTable.getInstance().getSkillFree(sk.getId());
 		return fee;
-	}
-	
-	
+	}	
 }
+ 

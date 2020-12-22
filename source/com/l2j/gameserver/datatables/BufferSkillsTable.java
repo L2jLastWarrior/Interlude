@@ -138,7 +138,7 @@ public class BufferSkillsTable
 		return _allSkills.get(id)._skillLevel;
 	}
 
-	public int getSkillFee(int id)
+	public int getSkillFree(int id)
 	{
 		return _buffPrizes.get(id);
 	}

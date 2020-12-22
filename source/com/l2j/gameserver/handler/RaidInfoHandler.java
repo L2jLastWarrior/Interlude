@@ -16,7 +16,7 @@
  *
  * http://www.gnu.org/copyleft/gpl.html
  */
-package com.l2j.gameserver.powerpack.RaidInfo;
+package com.l2j.gameserver.handler;
 
 import java.util.logging.Logger;
 
@@ -24,7 +24,6 @@ import javolution.text.TextBuilder;
 
 import com.l2j.Config;
 import com.l2j.gameserver.datatables.sql.NpcTable;
-import com.l2j.gameserver.handler.ICustomByPassHandler;
 import com.l2j.gameserver.managers.GrandBossManager;
 import com.l2j.gameserver.managers.RaidBossSpawnManager;
 import com.l2j.gameserver.model.actor.instance.L2NpcInstance;
