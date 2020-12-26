@@ -87,22 +87,24 @@
             </fileset>
         </copy>
         <copy todir="${build.dist.login}">
-            <fileset dir="dist">
+            <fileset dir="execs">
                 <include name="AccountManager.bat"/>
                 <include name="Anti_DDOS.sh"/>
                 <include name="LoginServer_loop.sh"/>
                 <include name="RegisterGameServer.*"/>
                 <include name="StartLoginServer.bat"/>
+                <include name="StartLoginServer.sh"/>
             </fileset>
         </copy>
         <copy todir="${build.dist.game}">
-            <fileset dir="dist">
+            <fileset dir="execs">
                 <include name="GameServer_loop.sh"/>
                 <include name="StartGameServer.bat"/>
+                <include name="StartGameServer.sh"/>
             </fileset>
         </copy>
         <copy todir="${build.dist}">
-            <fileset dir="dist">
+            <fileset dir="execs">
                 <include name="Start_LoginServer_noScreen.sh"/>
                 <include name="Start_GameServer_noScreen.sh"/>
             </fileset>
@@ -225,7 +227,7 @@
         
         <!-- Tools -->
         <copy todir="${build.dist.tools}">
-            <fileset dir="dist">
+            <fileset dir="execs">
                 <include name="DBInstallerGS.bat"/>
                 <include name="DBInstallerGS.sh"/>
                 <include name="DBInstallerLS.bat"/>

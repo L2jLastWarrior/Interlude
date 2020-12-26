@@ -1,9 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project name="L2jLastWarrior" default="dist-local" basedir=".">
-	<description>
-        This script will build the L2jLastWarrior-Server. Thanks for Using our Pack.
-        
-        This program is opensource    
+    <description>
         
     </description>
 
