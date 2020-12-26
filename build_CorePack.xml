@@ -149,11 +149,6 @@
                 <include name="*.*"/>
             </fileset>
         </copy>
-        <copy todir="${build.dist.game}/config/L2jPack_Version">
-            <fileset dir="config/L2jPack_Version">
-                <include name="*.*"/>
-            </fileset>
-        </copy>
         <copy todir="${build.dist.game}/config/Others_Settings">
             <fileset dir="config/Others_Settings">
                 <include name="*.*"/>
