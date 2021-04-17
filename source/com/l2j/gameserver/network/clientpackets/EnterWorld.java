@@ -78,7 +78,6 @@ import com.l2j.gameserver.network.serverpackets.Earthquake;
 import com.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2j.gameserver.network.serverpackets.ExStorageMaxCount;
-import com.l2j.gameserver.network.serverpackets.ExRedSky;
 import com.l2j.gameserver.network.serverpackets.FriendList;
 import com.l2j.gameserver.network.serverpackets.HennaInfo;
 import com.l2j.gameserver.network.serverpackets.ItemList;
