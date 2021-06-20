@@ -6,6 +6,6 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `lastIP` VARCHAR(20),
   `lastServer` int(4) default 1,
   `email` VARCHAR(45),
-  `recovery_key` int(6),  
+  `recovery_key` VARCHAR(6),  
   PRIMARY KEY (`login`)
 );
